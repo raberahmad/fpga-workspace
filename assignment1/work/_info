@@ -1,0 +1,49 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/18.1
+Ecomponent_one
+Z0 w1598968144
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dC:/Users/Raber/Documents/minor/fpga-workspace
+Z4 8C:/Users/Raber/Documents/minor/fpga-workspace/component_one.vhd
+Z5 FC:/Users/Raber/Documents/minor/fpga-workspace/component_one.vhd
+l0
+L4
+V?P_CimF:k=Cn[bS`b1lWF1
+!s100 OalP087ZZCLVWi9SBXG232
+Z6 OV;C;10.5b;63
+32
+Z7 !s110 1598968148
+!i10b 1
+Z8 !s108 1598968148.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Raber/Documents/minor/fpga-workspace/component_one.vhd|
+Z10 !s107 C:/Users/Raber/Documents/minor/fpga-workspace/component_one.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Aimplementation
+R1
+R2
+Z13 DEx4 work 13 component_one 0 22 ?P_CimF:k=Cn[bS`b1lWF1
+l12
+L11
+VU8cOGkNgeaKl7d?zCad5B2
+!s100 TgS>ZBILHGIK?j>olYd6<1
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12

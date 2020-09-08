@@ -1,0 +1,20 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity component_one is
+port (
+ inputs: in std_logic_vector(3 downto 0);
+ outputs: out std_logic_vector(6 downto 0)
+);
+end component_one;
+
+architecture implementation of component_one is
+begin
+ outputs(0) <= inputs(0);
+ outputs(1) <= inputs(1);
+ outputs(2) <= inputs(0) or inputs(1);
+ outputs(3) <= inputs(0) and inputs(1);
+ outputs(4) <= inputs(0) and inputs(1) and inputs(2) and inputs(3);
+ outputs(5) <= inputs(0) or inputs(1) or inputs(2) or inputs(3);
+ outputs(6) <= not(inputs(0) or inputs(1) or inputs(2) or inputs(3));
+end implementation;

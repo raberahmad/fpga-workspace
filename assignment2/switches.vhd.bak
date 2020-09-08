@@ -1,0 +1,19 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+
+entity switches is 
+port(
+
+	input_switches: 	in std_logic_vector(3 downto 0);
+	output:			out std_logic_vector(6 downto 0);
+	led_switch: 		out std_logic_vector(3 downto 0)
+);
+end entity;
+
+architecture switches_implementation of switches is
+begin
+
+
+
+end architecture;

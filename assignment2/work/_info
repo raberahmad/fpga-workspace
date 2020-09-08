@@ -1,0 +1,133 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Raber/Documents/minor/fpga-workspace
+Esegment
+Z0 w1599568021
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dC:/Users/Raber/Documents/minor/fpga-workspace/assignment2
+Z5 8C:\Users\Raber\Documents\minor\fpga-workspace\assignment2\segment.vhd
+Z6 FC:\Users\Raber\Documents\minor\fpga-workspace\assignment2\segment.vhd
+l0
+L5
+V6Ef[R[[PZjClNZ>4^`k@82
+!s100 Z>1jK6QRRDlG7HCKEYCYY1
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1599568340
+!i10b 1
+Z9 !s108 1599568340.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Raber\Documents\minor\fpga-workspace\assignment2\segment.vhd|
+Z11 !s107 C:\Users\Raber\Documents\minor\fpga-workspace\assignment2\segment.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Asegment_implementation
+R1
+R2
+R3
+DEx4 work 7 segment 0 22 6Ef[R[[PZjClNZ>4^`k@82
+l15
+L14
+VjLO_^^K`4<?ZBlnBnWm`]3
+!s100 N;?kH09O?JVD8:3PT3jXM1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Esegment_tb
+Z14 w1599568336
+R1
+R2
+R3
+R4
+Z15 8C:\Users\Raber\Documents\minor\fpga-workspace\assignment2\segment_tb.vhd
+Z16 FC:\Users\Raber\Documents\minor\fpga-workspace\assignment2\segment_tb.vhd
+l0
+L5
+V_CH9BOjN]_X1Z:WW@ki6^0
+!s100 <Rh4zEkOOkh5HRaUaCgU01
+R7
+32
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Raber\Documents\minor\fpga-workspace\assignment2\segment_tb.vhd|
+Z18 !s107 C:\Users\Raber\Documents\minor\fpga-workspace\assignment2\segment_tb.vhd|
+!i113 1
+R12
+R13
+Atestbench
+R1
+R2
+R3
+Z19 DEx4 work 10 segment_tb 0 22 _CH9BOjN]_X1Z:WW@ki6^0
+l31
+L10
+V_3Qf_UU1HVI^`Vh:?cOS02
+!s100 ]<GhB>k59EcJ9[<Cbb?:c2
+R7
+32
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 1
+R12
+R13
+Eswitches
+Z20 w1599511280
+R1
+R2
+R3
+R4
+Z21 8C:\Users\Raber\Documents\minor\fpga-workspace\assignment2\switches.vhd
+Z22 FC:\Users\Raber\Documents\minor\fpga-workspace\assignment2\switches.vhd
+l0
+L5
+V4<?OX7mjkf7_DloH]`lU:2
+!s100 0JSLn:JZiCSiAPP^zo>b91
+R7
+32
+Z23 !s110 1599511357
+!i10b 1
+Z24 !s108 1599511357.000000
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Raber\Documents\minor\fpga-workspace\assignment2\switches.vhd|
+Z26 !s107 C:\Users\Raber\Documents\minor\fpga-workspace\assignment2\switches.vhd|
+!i113 1
+R12
+R13
+Aswitches_implementation
+R1
+R2
+R3
+DEx4 work 8 switches 0 22 4<?OX7mjkf7_DloH]`lU:2
+l21
+L14
+VW19eWCoj2V@ZVYc8:EWh_0
+!s100 =IAKG@:;lWij<4V3zS^_20
+R7
+32
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R12
+R13
