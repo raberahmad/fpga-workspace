@@ -1,0 +1,133 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Raber/Documents/minor/fpga-workspace/assignment2
+Ecalculations
+Z0 w1600779300
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dC:/Users/Raber/Documents/minor/fpga-workspace/assignment3
+Z5 8C:\Users\Raber\Documents\minor\fpga-workspace\assignment3\calculations.vhd
+Z6 FC:\Users\Raber\Documents\minor\fpga-workspace\assignment3\calculations.vhd
+l0
+L6
+VLhUTaoY^@:`:<gl43g8R_1
+!s100 Q3G2oK2QXe9aWlXCS0X3B3
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1600779303
+!i10b 1
+Z9 !s108 1600779303.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Raber\Documents\minor\fpga-workspace\assignment3\calculations.vhd|
+Z11 !s107 C:\Users\Raber\Documents\minor\fpga-workspace\assignment3\calculations.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Aimplementation
+R1
+R2
+R3
+Z14 DEx4 work 12 calculations 0 22 LhUTaoY^@:`:<gl43g8R_1
+l45
+L24
+V3OULJH:3a;KI<hQk[=01C2
+!s100 F;m<>6eGjSePFn^R:Q;I>1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ecalculations_tb
+Z15 w1600773244
+R1
+R2
+R3
+R4
+Z16 8C:\Users\Raber\Documents\minor\fpga-workspace\assignment3\calculations_tb.vhd
+Z17 FC:\Users\Raber\Documents\minor\fpga-workspace\assignment3\calculations_tb.vhd
+l0
+L5
+VNaG62RkfOo>?aJSz7aW:l3
+!s100 mSD8EzWBDSeo[@kEZTdJ52
+R7
+32
+Z18 !s110 1600773248
+!i10b 1
+Z19 !s108 1600773248.000000
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Raber\Documents\minor\fpga-workspace\assignment3\calculations_tb.vhd|
+Z21 !s107 C:\Users\Raber\Documents\minor\fpga-workspace\assignment3\calculations_tb.vhd|
+!i113 1
+R12
+R13
+Atestbench
+R1
+R2
+R3
+DEx4 work 15 calculations_tb 0 22 NaG62RkfOo>?aJSz7aW:l3
+l50
+L10
+V=f5CM]XgKa3GmVQzPb1??2
+!s100 gOc6bJUo9]SAIX=ELLk363
+R7
+32
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
+Esegment
+Z22 w1600173778
+R1
+R2
+R3
+R4
+Z23 8C:\Users\Raber\Documents\minor\fpga-workspace\assignment3\segment.vhd
+Z24 FC:\Users\Raber\Documents\minor\fpga-workspace\assignment3\segment.vhd
+l0
+L5
+VZeRTCgUlQb52S=:B<Y@Ce0
+!s100 i=Ih>cfcEHd0R<4amN5@^0
+R7
+32
+Z25 !s110 1600174664
+!i10b 1
+Z26 !s108 1600174664.000000
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Raber\Documents\minor\fpga-workspace\assignment3\segment.vhd|
+Z28 !s107 C:\Users\Raber\Documents\minor\fpga-workspace\assignment3\segment.vhd|
+!i113 1
+R12
+R13
+Asegment_implementation
+R1
+R2
+R3
+DEx4 work 7 segment 0 22 ZeRTCgUlQb52S=:B<Y@Ce0
+l17
+L15
+VN9`LmL13^[lT>bjW4KiWM3
+!s100 Nz5DPhFUAT[5M=O4HW9^h2
+R7
+32
+R25
+!i10b 1
+R26
+R27
+R28
+!i113 1
+R12
+R13

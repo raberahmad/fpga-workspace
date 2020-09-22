@@ -1,0 +1,169 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "segment_first[6]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_first[5]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_first[4]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_first[3]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_first[2]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_first[1]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_first[0]",
+					"strict" : false
+				},
+				{
+					"name" : "status_leds_first[0]",
+					"strict" : false
+				},
+				{
+					"name" : "status_leds_first[1]",
+					"strict" : false
+				},
+				{
+					"name" : "status_leds_first[2]",
+					"strict" : false
+				},
+				{
+					"name" : "status_leds_first[3]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_second[6]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_second[5]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_second[4]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_second[3]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_second[2]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_second[1]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_second[0]",
+					"strict" : false
+				},
+				{
+					"name" : "status_leds_second[0]",
+					"strict" : false
+				},
+				{
+					"name" : "status_leds_second[1]",
+					"strict" : false
+				},
+				{
+					"name" : "status_leds_second[2]",
+					"strict" : false
+				},
+				{
+					"name" : "status_leds_second[3]",
+					"strict" : false
+				},
+				{
+					"name" : "output_segment_left[5]",
+					"strict" : false
+				},
+				{
+					"name" : "output_segment_left[4]",
+					"strict" : false
+				},
+				{
+					"name" : "output_segment_right[6]",
+					"strict" : false
+				},
+				{
+					"name" : "output_segment_right[5]",
+					"strict" : false
+				},
+				{
+					"name" : "output_segment_right[4]",
+					"strict" : false
+				},
+				{
+					"name" : "output_segment_right[3]",
+					"strict" : false
+				},
+				{
+					"name" : "output_segment_right[2]",
+					"strict" : false
+				},
+				{
+					"name" : "output_segment_right[1]",
+					"strict" : false
+				},
+				{
+					"name" : "output_segment_right[0]",
+					"strict" : false
+				},
+				{
+					"name" : "inputs_first[0]",
+					"strict" : false
+				},
+				{
+					"name" : "inputs_first[1]",
+					"strict" : false
+				},
+				{
+					"name" : "inputs_first[2]",
+					"strict" : false
+				},
+				{
+					"name" : "inputs_first[3]",
+					"strict" : false
+				},
+				{
+					"name" : "inputs_second[0]",
+					"strict" : false
+				},
+				{
+					"name" : "inputs_second[1]",
+					"strict" : false
+				},
+				{
+					"name" : "inputs_second[2]",
+					"strict" : false
+				},
+				{
+					"name" : "inputs_second[3]",
+					"strict" : false
+				},
+				{
+					"name" : "calc_button",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
