@@ -1,0 +1,6 @@
+
+State Machine - |finitestate|present_state
+Name present_state.END_STATE present_state.COUNTER_STATE present_state.IDLE 
+present_state.IDLE 0 0 0 
+present_state.COUNTER_STATE 0 1 1 
+present_state.END_STATE 1 0 1 
