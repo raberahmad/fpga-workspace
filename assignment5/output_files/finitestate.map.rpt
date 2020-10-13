@@ -1,5 +1,5 @@
 Analysis & Synthesis report for finitestate
-Tue Oct 06 14:53:45 2020
+Tue Oct 13 10:39:59 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,14 +14,12 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |finitestate|present_state
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Port Connectivity Checks: "segment:outputSegment"
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Port Connectivity Checks: "segment:outputSegment"
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -47,13 +45,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct 06 14:53:45 2020       ;
+; Analysis & Synthesis Status     ; Successful - Tue Oct 13 10:39:59 2020       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; finitestate                                 ;
 ; Top-level Entity Name           ; finitestate                                 ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 27                                          ;
+; Total registers                 ; 40                                          ;
 ; Total pins                      ; 14                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -186,35 +184,36 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 45        ;
+; Estimate of Logic utilization (ALMs needed) ; 52        ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 49        ;
+; Combinational ALUT usage for logic          ; 85        ;
 ;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 15        ;
-;     -- 5 input functions                    ; 2         ;
-;     -- 4 input functions                    ; 6         ;
-;     -- <=3 input functions                  ; 26        ;
+;     -- 6 input functions                    ; 19        ;
+;     -- 5 input functions                    ; 13        ;
+;     -- 4 input functions                    ; 13        ;
+;     -- <=3 input functions                  ; 40        ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 27        ;
+; Dedicated logic registers                   ; 40        ;
 ;                                             ;           ;
 ; I/O pins                                    ; 14        ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 27        ;
-; Total fan-out                               ; 244       ;
-; Average fan-out                             ; 2.35      ;
+; Maximum fan-out                             ; 40        ;
+; Total fan-out                               ; 459       ;
+; Average fan-out                             ; 3.00      ;
 +---------------------------------------------+-----------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |finitestate               ; 49 (49)             ; 27 (27)                   ; 0                 ; 0          ; 14   ; 0            ; |finitestate        ; finitestate ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                   ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+-------------+--------------+
+; |finitestate               ; 85 (78)             ; 40 (40)                   ; 0                 ; 0          ; 14   ; 0            ; |finitestate                       ; finitestate ; work         ;
+;    |segment:outputSegment| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |finitestate|segment:outputSegment ; segment     ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -230,46 +229,17 @@ Encoding Type:  One-Hot
 +-----------------------------+-------------------------+-----------------------------+--------------------+
 
 
-+--------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                   ;
-+----------------------------------------+---------------------------------------------+
-; Register name                          ; Reason for Removal                          ;
-+----------------------------------------+---------------------------------------------+
-; segment_input[3]                       ; Merged with var_counter[3]                  ;
-; segment_input[2]                       ; Merged with var_counter[2]                  ;
-; segment_input[1]                       ; Merged with var_counter[1]                  ;
-; segment_input[0]                       ; Merged with var_counter[0]                  ;
-; present_state.IDLE                     ; Stuck at GND due to stuck port clock_enable ;
-; present_state.COUNTER_STATE            ; Stuck at GND due to stuck port data_in      ;
-; end_of_count                           ; Stuck at GND due to stuck port clock_enable ;
-; turn_on_segment                        ; Stuck at GND due to stuck port clock_enable ;
-; var_counter[0..3]                      ; Stuck at GND due to stuck port clock_enable ;
-; present_state.END_STATE                ; Stuck at GND due to stuck port data_in      ;
-; Total Number of Removed Registers = 13 ;                                             ;
-+----------------------------------------+---------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                         ;
-+--------------------+--------------------------------+-------------------------------------------------------------------------------+
-; Register name      ; Reason for Removal             ; Registers Removed due to This Register                                        ;
-+--------------------+--------------------------------+-------------------------------------------------------------------------------+
-; present_state.IDLE ; Stuck at GND                   ; present_state.COUNTER_STATE, turn_on_segment, var_counter[0], var_counter[1], ;
-;                    ; due to stuck port clock_enable ; var_counter[2], var_counter[3], present_state.END_STATE                       ;
-+--------------------+--------------------------------+-------------------------------------------------------------------------------+
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 27    ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 40    ;
+; Number of registers using Synchronous Clear  ; 26    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 3     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 8     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -279,10 +249,8 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |finitestate|var_counter[0] ;
-; 3:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |finitestate|var_clk[7]     ;
-; 3:1                ; 26 bits   ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; No         ; |finitestate|var_clk        ;
-; 3:1                ; 26 bits   ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; No         ; |finitestate|var_clk        ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |finitestate|var_counter[1] ;
+; 6:1                ; 26 bits   ; 104 LEs       ; 0 LEs                ; 104 LEs                ; Yes        ; |finitestate|var_clk[11]    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
 
 
@@ -300,21 +268,25 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 27                          ;
-;     SLD               ; 26                          ;
-;     plain             ; 1                           ;
-; arriav_lcell_comb     ; 51                          ;
+; arriav_ff             ; 40                          ;
+;     CLR               ; 3                           ;
+;     ENA               ; 8                           ;
+;     SCLR              ; 26                          ;
+;     plain             ; 3                           ;
+; arriav_lcell_comb     ; 86                          ;
 ;     arith             ; 26                          ;
 ;         1 data inputs ; 26                          ;
-;     normal            ; 25                          ;
-;         0 data inputs ; 2                           ;
-;         4 data inputs ; 6                           ;
-;         5 data inputs ; 2                           ;
-;         6 data inputs ; 15                          ;
+;     normal            ; 60                          ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 8                           ;
+;         4 data inputs ; 13                          ;
+;         5 data inputs ; 13                          ;
+;         6 data inputs ; 19                          ;
 ; boundary_port         ; 14                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.40                        ;
-; Average LUT depth     ; 4.66                        ;
+; Max LUT depth         ; 6.50                        ;
+; Average LUT depth     ; 4.62                        ;
 +-----------------------+-----------------------------+
 
 
@@ -333,7 +305,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Oct 06 14:53:30 2020
+    Info: Processing started: Tue Oct 13 10:39:42 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off assignment5 -c finitestate
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -345,34 +317,19 @@ Info (12021): Found 2 design units, including 1 entities, in source file finites
     Info (12023): Found entity 1: finitestate File: C:/Users/Raber/Documents/minor/fpga-workspace/assignment5/finitestate.vhd Line: 6
 Info (12127): Elaborating entity "finitestate" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at finitestate.vhd(37): object "status_leds" assigned a value but never read File: C:/Users/Raber/Documents/minor/fpga-workspace/assignment5/finitestate.vhd Line: 37
-Warning (10492): VHDL Process Statement warning at finitestate.vhd(49): signal "start_button" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Raber/Documents/minor/fpga-workspace/assignment5/finitestate.vhd Line: 49
-Warning (10492): VHDL Process Statement warning at finitestate.vhd(69): signal "end_of_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Raber/Documents/minor/fpga-workspace/assignment5/finitestate.vhd Line: 69
+Warning (10492): VHDL Process Statement warning at finitestate.vhd(71): signal "end_of_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Raber/Documents/minor/fpga-workspace/assignment5/finitestate.vhd Line: 71
 Info (12128): Elaborating entity "segment" for hierarchy "segment:outputSegment" File: C:/Users/Raber/Documents/minor/fpga-workspace/assignment5/finitestate.vhd Line: 44
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "seven_segment_out[6]" is stuck at VCC File: C:/Users/Raber/Documents/minor/fpga-workspace/assignment5/finitestate.vhd Line: 8
-    Warning (13410): Pin "seven_segment_out[5]" is stuck at VCC File: C:/Users/Raber/Documents/minor/fpga-workspace/assignment5/finitestate.vhd Line: 8
-    Warning (13410): Pin "seven_segment_out[4]" is stuck at VCC File: C:/Users/Raber/Documents/minor/fpga-workspace/assignment5/finitestate.vhd Line: 8
-    Warning (13410): Pin "seven_segment_out[3]" is stuck at VCC File: C:/Users/Raber/Documents/minor/fpga-workspace/assignment5/finitestate.vhd Line: 8
-    Warning (13410): Pin "seven_segment_out[2]" is stuck at VCC File: C:/Users/Raber/Documents/minor/fpga-workspace/assignment5/finitestate.vhd Line: 8
-    Warning (13410): Pin "seven_segment_out[1]" is stuck at VCC File: C:/Users/Raber/Documents/minor/fpga-workspace/assignment5/finitestate.vhd Line: 8
-    Warning (13410): Pin "seven_segment_out[0]" is stuck at VCC File: C:/Users/Raber/Documents/minor/fpga-workspace/assignment5/finitestate.vhd Line: 8
-    Warning (13410): Pin "state_debug[0]" is stuck at GND File: C:/Users/Raber/Documents/minor/fpga-workspace/assignment5/finitestate.vhd Line: 13
-    Warning (13410): Pin "state_debug[1]" is stuck at GND File: C:/Users/Raber/Documents/minor/fpga-workspace/assignment5/finitestate.vhd Line: 13
-    Warning (13410): Pin "state_debug[2]" is stuck at GND File: C:/Users/Raber/Documents/minor/fpga-workspace/assignment5/finitestate.vhd Line: 13
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "reset_button" File: C:/Users/Raber/Documents/minor/fpga-workspace/assignment5/finitestate.vhd Line: 12
-    Warning (15610): No output dependent on input pin "start_button" File: C:/Users/Raber/Documents/minor/fpga-workspace/assignment5/finitestate.vhd Line: 11
-Info (21057): Implemented 89 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 125 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 11 output pins
-    Info (21061): Implemented 75 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 4851 megabytes
-    Info: Processing ended: Tue Oct 06 14:53:45 2020
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:32
+    Info (21061): Implemented 111 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4848 megabytes
+    Info: Processing ended: Tue Oct 13 10:39:59 2020
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:34
 
 

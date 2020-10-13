@@ -42,11 +42,11 @@ signal end_of_count: std_logic:='0';
 begin
 
 outputSegment: segment PORT MAP (inputs => segment_input, output_led => status_leds, segment_enable => turn_on_segment, output_segments => seven_segment_out);
-state_debug <= STD_LOGIC_VECTOR(TO_UNSIGNED(state'POS(present_state),3));
+
 process(clk, reset_button)
 
 begin
-	if start_button= not('1') then 
+	if reset_button = '0' then 
 		present_state<=IDLE;
 	elsif (clk'event AND clk='1') then
 		present_state<=next_state;
@@ -56,22 +56,25 @@ end process;
 
 
 
-PROCESS(start_button, present_state)
+PROCESS(clk, start_button, present_state)
 	BEGIN
 		CASE present_state IS
 			WHEN IDLE => 
-				IF start_button= not('1') THEN
+				state_debug <= "001";
+				IF (start_button = '0')THEN
 					next_state <= COUNTER_STATE;
 				ELSE
 					next_state <= IDLE;
 				END IF;
-			WHEN COUNTER_STATE => 
+			WHEN COUNTER_STATE =>
+				state_debug <= "010";
 				IF (end_of_count = '1') THEN
 					next_state <= END_STATE;
 				ELSE
 					next_state <= COUNTER_STATE;
 				END IF;	
-			wHEN END_STATE => 
+			WHEN END_STATE => 
+				state_debug <= "100";
 				next_state <= END_STATE;
 			END CASE;
 END PROCESS;
@@ -84,19 +87,19 @@ PROCESS(clk, present_state)
 	if (rising_edge(clk)) then
 		IF (present_state = IDLE) then
 			var_clk := var_clk +1;
-			if (var_clk = 12500000) then
+			var_counter:=0;
+			turn_on_segment<= '0';
+			if (var_clk = 12) then --12500000
 				led0<='1';
-			end if;
-			if (var_clk = 50000000) then
+			elsif (var_clk = 50) then --50000000
 				var_clk :=0;
 				led0<='0';
 			end if;
-		end if;
 
-		if(present_state = COUNTER_STATE) then
+		elsif (present_state = COUNTER_STATE) then
 			var_clk := var_clk +1;
 			turn_on_segment <= '1';
-			end_of_count <= '1';
+			end_of_count <= '0';
 			led0 <= '0';
 			if (var_clk = 50000000) then
 				var_counter := var_counter +1;
@@ -106,17 +109,15 @@ PROCESS(clk, present_state)
 					turn_on_segment <= '0';
 				end if;
 				var_clk := 0;
-			end if;	
-		segment_input <= STD_LOGIC_VECTOR(TO_UNSIGNED(var_counter, segment_input'length));	
-		end if;
-
-
-		if(present_state = END_STATE) then
-			var_clk := var_clk +1;
-			if (var_clk = 18750000) then
-				led0<='1';
+				segment_input <= STD_LOGIC_VECTOR(TO_UNSIGNED(var_counter, segment_input'length));	
 			end if;
-			if (var_clk = 25000000) then
+		elsif(present_state = END_STATE) then
+			var_counter:=0;
+			turn_on_segment<= '0';
+			var_clk := var_clk +1;
+			if (var_clk = 18) then --18750000
+				led0<='1';
+			elsif (var_clk = 25) then --25000000
 				var_clk :=0;
 				led0<='0';
 			end if;
@@ -124,10 +125,5 @@ PROCESS(clk, present_state)
 	end if;
 
 end process;
-
-
-
-
-
 
 end implementation;

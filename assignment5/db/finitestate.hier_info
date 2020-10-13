@@ -11,8 +11,8 @@ clk => segment_input[1].CLK
 clk => segment_input[2].CLK
 clk => segment_input[3].CLK
 clk => end_of_count.CLK
-clk => turn_on_segment.CLK
 clk => led0~reg0.CLK
+clk => turn_on_segment.CLK
 clk => var_counter[0].CLK
 clk => var_counter[1].CLK
 clk => var_counter[2].CLK
@@ -45,13 +45,12 @@ clk => var_clk[24].CLK
 clk => var_clk[25].CLK
 clk => present_state~1.DATAIN
 led0 <= led0~reg0.DB_MAX_OUTPUT_PORT_TYPE
-start_button => Selector0.IN2
-start_button => present_state~3.DATAIN
 start_button => next_state.IDLE.DATAB
-reset_button => ~NO_FANOUT~
+start_button => Selector0.IN1
+reset_button => present_state~3.DATAIN
 state_debug[0] <= state_debug[0].DB_MAX_OUTPUT_PORT_TYPE
 state_debug[1] <= state_debug[1].DB_MAX_OUTPUT_PORT_TYPE
-state_debug[2] <= <GND>
+state_debug[2] <= state_debug[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |finitestate|segment:outputSegment
