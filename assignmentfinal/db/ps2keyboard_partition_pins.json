@@ -1,0 +1,57 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "output_to_segment[6]",
+					"strict" : false
+				},
+				{
+					"name" : "output_to_segment[5]",
+					"strict" : false
+				},
+				{
+					"name" : "output_to_segment[4]",
+					"strict" : false
+				},
+				{
+					"name" : "output_to_segment[3]",
+					"strict" : false
+				},
+				{
+					"name" : "output_to_segment[2]",
+					"strict" : false
+				},
+				{
+					"name" : "output_to_segment[1]",
+					"strict" : false
+				},
+				{
+					"name" : "output_to_segment[0]",
+					"strict" : false
+				},
+				{
+					"name" : "error_led",
+					"strict" : false
+				},
+				{
+					"name" : "idle_led",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "clk_keyb",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_data",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

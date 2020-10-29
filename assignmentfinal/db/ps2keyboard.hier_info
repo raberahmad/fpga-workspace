@@ -1,0 +1,119 @@
+|ps2keyboard
+clk => debounce:debounce_ps2_clk.clk
+clk => idle_led~reg0.CLK
+clk => idle.CLK
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => counter[3].CLK
+clk => counter[4].CLK
+clk => counter[5].CLK
+clk => counter[6].CLK
+clk => counter[7].CLK
+clk => counter[8].CLK
+clk => counter[9].CLK
+clk => counter[10].CLK
+clk => counter[11].CLK
+clk => sync_ffs[0].CLK
+clk => sync_ffs[1].CLK
+clk => debounce:debounce_ps2_data.clk
+clk_keyb => sync_ffs[0].DATAIN
+ps2_data => sync_ffs[1].DATAIN
+output_to_segment[6] <= segment:outputSegment.output_segments[6]
+output_to_segment[5] <= segment:outputSegment.output_segments[5]
+output_to_segment[4] <= segment:outputSegment.output_segments[4]
+output_to_segment[3] <= segment:outputSegment.output_segments[3]
+output_to_segment[2] <= segment:outputSegment.output_segments[2]
+output_to_segment[1] <= segment:outputSegment.output_segments[1]
+output_to_segment[0] <= segment:outputSegment.output_segments[0]
+error_led <= process_3.DB_MAX_OUTPUT_PORT_TYPE
+idle_led <= idle_led~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ps2keyboard|debounce:debounce_ps2_clk
+clk => result~reg0.CLK
+clk => counter_out[0].CLK
+clk => counter_out[1].CLK
+clk => counter_out[2].CLK
+clk => counter_out[3].CLK
+clk => counter_out[4].CLK
+clk => counter_out[5].CLK
+clk => counter_out[6].CLK
+clk => counter_out[7].CLK
+clk => counter_out[8].CLK
+clk => flipflops[0].CLK
+clk => flipflops[1].CLK
+button => flipflops[0].DATAIN
+result <= result~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ps2keyboard|debounce:debounce_ps2_data
+clk => result~reg0.CLK
+clk => counter_out[0].CLK
+clk => counter_out[1].CLK
+clk => counter_out[2].CLK
+clk => counter_out[3].CLK
+clk => counter_out[4].CLK
+clk => counter_out[5].CLK
+clk => counter_out[6].CLK
+clk => counter_out[7].CLK
+clk => counter_out[8].CLK
+clk => flipflops[0].CLK
+clk => flipflops[1].CLK
+button => flipflops[0].DATAIN
+result <= result~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ps2keyboard|segment:outputSegment
+inputs[0] => Mux0.IN19
+inputs[0] => Mux1.IN19
+inputs[0] => Mux2.IN19
+inputs[0] => Mux3.IN19
+inputs[0] => Mux4.IN19
+inputs[0] => Mux5.IN19
+inputs[0] => Mux6.IN19
+inputs[0] => output_led[0].DATAIN
+inputs[1] => Mux0.IN18
+inputs[1] => Mux1.IN18
+inputs[1] => Mux2.IN18
+inputs[1] => Mux3.IN18
+inputs[1] => Mux4.IN18
+inputs[1] => Mux5.IN18
+inputs[1] => Mux6.IN18
+inputs[1] => output_led[1].DATAIN
+inputs[2] => Mux0.IN17
+inputs[2] => Mux1.IN17
+inputs[2] => Mux2.IN17
+inputs[2] => Mux3.IN17
+inputs[2] => Mux4.IN17
+inputs[2] => Mux5.IN17
+inputs[2] => Mux6.IN17
+inputs[2] => output_led[2].DATAIN
+inputs[3] => Mux0.IN16
+inputs[3] => Mux1.IN16
+inputs[3] => Mux2.IN16
+inputs[3] => Mux3.IN16
+inputs[3] => Mux4.IN16
+inputs[3] => Mux5.IN16
+inputs[3] => Mux6.IN16
+inputs[3] => output_led[3].DATAIN
+segment_enable => output_segments.OUTPUTSELECT
+segment_enable => output_segments.OUTPUTSELECT
+segment_enable => output_segments.OUTPUTSELECT
+segment_enable => output_segments.OUTPUTSELECT
+segment_enable => output_segments.OUTPUTSELECT
+segment_enable => output_segments.OUTPUTSELECT
+segment_enable => output_segments.OUTPUTSELECT
+output_segments[6] <= output_segments.DB_MAX_OUTPUT_PORT_TYPE
+output_segments[5] <= output_segments.DB_MAX_OUTPUT_PORT_TYPE
+output_segments[4] <= output_segments.DB_MAX_OUTPUT_PORT_TYPE
+output_segments[3] <= output_segments.DB_MAX_OUTPUT_PORT_TYPE
+output_segments[2] <= output_segments.DB_MAX_OUTPUT_PORT_TYPE
+output_segments[1] <= output_segments.DB_MAX_OUTPUT_PORT_TYPE
+output_segments[0] <= output_segments.DB_MAX_OUTPUT_PORT_TYPE
+output_led[0] <= inputs[0].DB_MAX_OUTPUT_PORT_TYPE
+output_led[1] <= inputs[1].DB_MAX_OUTPUT_PORT_TYPE
+output_led[2] <= inputs[2].DB_MAX_OUTPUT_PORT_TYPE
+output_led[3] <= inputs[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
